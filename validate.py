@@ -26,7 +26,7 @@ def incorporate_imports(tags, location,imports):
 def validate(xml_filename, xsd_filename):
     '''
     xml_filename: File to validate
-    xsd_filename: File if the rules
+    xsd_filename: File with the schema rules
 
     '''
     #List of imports
@@ -56,7 +56,7 @@ def validate(xml_filename, xsd_filename):
     #Create a schema object
     xmlschema = etree.XMLSchema(xsd_doc)
     
-    #Try validade the files
+    #Try validade
     xmlschema.assertValid(xml_doc)
-    return 'XML válido !!!'
+    return xml_doc
 
